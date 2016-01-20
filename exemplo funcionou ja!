@@ -1,0 +1,10 @@
+else if(cmd.getName().equals("tkranking")){
+		ArrayList<String> listajogadores = (ArrayList<String>) jogadores.getStringList("players");
+		int tamanhodalista = listajogadores.size();
+		Map<String, Integer> todoskillseplayers = new TreeMap(Collections.reverseOrder());
+		String player = new String();
+		for(int i = 0; i < tamanhodalista; ++i){
+			player = listajogadores.get(i);
+			int kills = jogadores.getInt("kills." + player);
+			todoskillseplayers.put(player, kills);
+			}
